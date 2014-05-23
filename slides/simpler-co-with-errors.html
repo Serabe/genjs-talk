@@ -1,0 +1,15 @@
+<h2>simplerCo and errors</h2>
+
+<pre><code class="js">
+var simplerCo = function(gen) {
+  var genObj = gen();
+  var currentValue = genObj.next();
+  currentValue.value(function(err,data) {
+    if(err) {
+      genObj.throw(err)
+    } else {
+      genObj.next(data);
+    }
+  });
+};	
+</code></pre>

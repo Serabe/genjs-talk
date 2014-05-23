@@ -1,0 +1,18 @@
+<h2>Using simplerCo</h2>
+
+<pre><code class="js">
+var fs = require('fs');
+
+var readFile = function() {
+  var args = Array.prototype.slice.call(arguments,0);
+  return function(callback) {
+    args.push(callback);
+    return fs.readFile.apply(null, args);
+  };
+};
+
+simplerCo(function*() {
+  var content = yield readFile('code/a.txt', 'utf8');
+  console.log(content);
+});
+</code></pre>

@@ -1,0 +1,7 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Generators in JS",
+    "packageVersion": "0.0.1",
+    "useSass": true
+  }
+}

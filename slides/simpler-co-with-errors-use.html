@@ -1,0 +1,14 @@
+<h2>simplerCo and errors</h2>
+
+<pre><code class="js">
+simplerCo(function*() {
+  var content = "Fuck my life";
+  try{
+    content = yield readFile('no_hay_ná.txt', 'utf8');
+    console.log(content);
+  } catch(err){
+    console.log("Some error occured:\n" + err);
+    console.log(content);
+  }
+});
+</code></pre>

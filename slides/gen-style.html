@@ -1,0 +1,11 @@
+<h2>Generator style</h2>
+
+<pre><code class="js">
+var fs = require('fs');
+var co = require('co');
+
+co(function*(){
+  var content = yield fs.readFile('code/a.txt', 'utf8');
+  console.log(content);
+})();	
+</code></pre>

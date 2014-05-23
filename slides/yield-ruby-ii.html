@@ -1,0 +1,13 @@
+<h2>yield</h2>
+
+<pre><code class="ruby">
+def gen_arr arr
+  arr.each.lazy
+end	
+
+en = gen_arr [1,2,3]
+
+puts en.next # 1
+puts en.next # 2
+puts en.next # 3
+</code></pre>

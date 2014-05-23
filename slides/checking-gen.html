@@ -1,0 +1,9 @@
+<h2>Checking Generators</h2>
+
+<pre><code class="js">
+var isGenerator = function(obj) {
+  return obj &&
+    obj.constructor &&
+    'GeneratorFunction' == obj.constructor.name;
+}
+</code></pre>

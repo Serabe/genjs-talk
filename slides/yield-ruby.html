@@ -1,0 +1,19 @@
+<h2>yield</h2>
+
+<p>In Ruby</p>
+
+<pre><code class="ruby">
+def gen_arr arr
+  Enumerator.new do |y|
+    arr.each do |el|
+      y << el
+    end
+  end.lazy
+end
+
+en = gen_arr [1,2,3]
+
+puts en.next # 1
+puts en.next # 2
+puts en.next # 3
+</code></pre>

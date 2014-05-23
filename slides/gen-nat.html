@@ -1,0 +1,14 @@
+<h2>Naturals</h2>
+<pre>
+<code class="js">
+var nat = function*() {
+  var i = 0;
+  while(true) {
+    yield ++i;
+  }
+};
+
+var myNat = nat();
+console.log(myNat.next());
+</code>
+</pre>
